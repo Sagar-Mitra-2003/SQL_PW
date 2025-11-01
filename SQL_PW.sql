@@ -1,5 +1,5 @@
-# SQL Assignment
-/*
+SQL Assignment
+
 Question 1 : Explain the fundamental differences between DDL, DML, and DQL commands in SQL.
 Provide one example for each type of command. 
 
@@ -301,7 +301,7 @@ ________________________________________
 Question 6 :  Create a database named ECommerceDB and perform the following tasks
 
 Answer : 
-*/
+
 # 1 : Creating DataBase
 CREATE DATABASE ECommerceDB;
 USE ECommerceDB;
@@ -362,14 +362,14 @@ INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount) VALUES
 	(1005, 2, '2023-09-24', 120.00),
 	(1006, 1, '2023-06-19', 20.00);
 
-/*
+
 Question 7 : Generate a report showing CustomerName, Email, and the 
 TotalNumberofOrders for each customer. Include customers who have not placed 
 any orders, in which case their TotalNumberofOrders should be 0. Order the results 
 by CustomerName. 
 
 Answer : 
-*/
+
 
 SELECT
     C.CustomerName,
@@ -384,13 +384,13 @@ GROUP BY
 ORDER BY
     C.CustomerName;
     
-/*
+
 Question 8 :  Retrieve Product Information with Category: Write a SQL query to 
 display the ProductName, Price, StockQuantity, and CategoryName for all 
 products. Order the results by CategoryName and then ProductName alphabetically. 
 
 Answer :
-*/
+
 
 SELECT 
     p.ProductName,
@@ -407,14 +407,14 @@ ORDER BY
     c.CategoryName ASC,
     p.ProductName ASC;
 
-/*
+
 Question 9 : Write a SQL query that uses a Common Table Expression (CTE) and a 
 Window Function (specifically ROW_NUMBER() or RANK()) to display the 
 CategoryName, ProductName, and Price for the top 2 most expensive products in 
 each CategoryName. 
 
 Answer : 
-*/
+
 
 WITH RankedProducts AS (
     SELECT 
@@ -444,7 +444,7 @@ ORDER BY
     CategoryName ASC,
     Price DESC;
 
-/*
+
 Question 10 : You are hired as a data analyst by Sakila Video Rentals, a global movie 
 rental company. The management team is looking to improve decision-making by 
 analyzing existing customer, rental, and inventory data. 
@@ -461,7 +461,7 @@ never been rented.
 5. Identify customers who have rented more than 10 times in the last 6 months.
 
 Answer :
-*/
+
 
 # 1 : Top 5 customers based on total amount spent
 
